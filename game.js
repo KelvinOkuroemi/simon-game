@@ -14,6 +14,14 @@ $(document).keypress(function () {
   }
 });
 
+// Detect button press
+$(".start-btn").click(function(){
+  if (!gameStarted) {
+    nextSequence();
+    gameStarted = true;
+  }
+})
+
 //detecting clicks
 $(".btn").click(function () {
   let userChosenColour = this.id; // or alert($(this).attr('id'));
